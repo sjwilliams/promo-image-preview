@@ -12,13 +12,13 @@ const textElMaker = (text, type) => {
 
 const pMaker = (text) => {
 	const el = textElMaker(text);
-	el.style.fontSize = '1rem';
+	el.style.fontSize = '0.88rem';
 	return el;
 };
 
 const hedMaker = (text) => {
 	const el = textElMaker(text, 'h2');
-	el.style.fontSize = '2rem';
+	el.style.fontSize = '1.6rem';
 	el.style.margin = '2rem 0 1rem 0';
 	return el;
 };
@@ -27,7 +27,7 @@ const imageMaker = (url) => {
 	const el = document.createElement('img');
 	el.src = url;
 	el.style.display = 'block';
-	el.style.width = '400px';
+	el.style.width = '300px';
 	el.style.margin = '0.5rem 0';
 	return el;
 };
@@ -54,10 +54,26 @@ if(!!articles.length && !!articles[0].image && !!articles[0].image.length){
 			message.push(imageMaker(url));
 
 			const reduced = reduceFraction(width, height);
-			message.push(pMaker(`Found ${width}px x ${height}px (${reduced[0]}x${reduced[1]}) image`));
+			message.push(pMaker(`${width}px x ${height}px (${reduced[0]}x${reduced[1]}) image`));
 		});
 	});
 }
+
+
+[{
+	name: 'Facebook Meta',
+	selector: 'meta[property="og:image"]'
+}, {
+	name: 'Twitter Meta',
+	selector: 'meta[property="twitter:image"]'
+}].forEach((platform) => {
+	const metaEl = document.querySelector(platform.selector);
+	if(metaEl){
+		const url = metaEl.getAttribute('content');
+		message.push(hedMaker(platform.name));
+		message.push(imageMaker(url));
+	}
+});
 
 message.forEach((el) => {
 	messageEl.append(el);
@@ -72,4 +88,3 @@ messageEl.style.fontFamily = "Arial, sans-serif";
 messageEl.style.backgroundColor = "#f4ff60";
 messageEl.style.color = '#000000';
 messageEl.style.padding = "20px 20px 20px 20px";
-console.log(message);

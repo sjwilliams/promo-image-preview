@@ -1,6 +1,6 @@
 {
-  "name": promo-image-preview",
-  "version": "1.0.0",
+  "name": "promo-image-preview",
+  "version": "0.0.1",
   "description": "Chrome bookmarklet to preview social and search engines for the current URL",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sjwilliams/promo-image-preview#readme",
   "dependencies": {
-    "bookmarklet": "0.0.6",
+    "bookmarklet": "1.0.4",
     "underscore": "^1.8.3"
   }
 }
