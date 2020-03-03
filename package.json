@@ -1,0 +1,26 @@
+{
+  "name": promo-image-preview",
+  "version": "1.0.0",
+  "description": "Chrome bookmarklet to preview social and search engines for the current URL",
+  "main": "index.js",
+  "scripts": {
+    "generate": "./generateIndex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjwilliams/promo-image-preview.git"
+  },
+  "keywords": [
+    "structured data"
+  ],
+  "author": "Josh Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjwilliams/promo-image-preview/issues"
+  },
+  "homepage": "https://github.com/sjwilliams/promo-image-preview#readme",
+  "dependencies": {
+    "bookmarklet": "0.0.6",
+    "underscore": "^1.8.3"
+  }
+}
