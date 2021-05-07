@@ -21,6 +21,6 @@
   "homepage": "https://github.com/sjwilliams/promo-image-preview#readme",
   "dependencies": {
     "bookmarklet": "1.0.4",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   }
 }
