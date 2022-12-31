@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sjwilliams/promo-image-preview#readme",
   "dependencies": {
-    "bookmarklet": "1.0.4",
+    "bookmarklet": "3.0.0",
     "underscore": "^1.8.3"
   }
 }
